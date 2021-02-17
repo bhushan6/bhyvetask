@@ -1,0 +1,16 @@
+.ProfileForm {
+  width: 70%;
+  background: #2d2f36;
+}
+
+.ProfileForm .firstname-field,
+.lastname-field {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 450px) {
+  .ProfileForm {
+    width: 100vw;
+  }
+}

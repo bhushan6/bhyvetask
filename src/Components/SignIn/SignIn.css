@@ -1,0 +1,9 @@
+.SignIn {
+  width: 70%;
+}
+
+@media (max-width: 450px) {
+  .SignIn {
+    width: 100%;
+  }
+}

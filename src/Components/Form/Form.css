@@ -1,0 +1,126 @@
+body {
+  background-color: #e2e2e5;
+  color: #e2e2e5;
+}
+
+.Form {
+  width: 100%;
+  background-color: #2d2f36;
+  padding: 1rem;
+}
+
+.Form h1,
+.ProfileForm h1 {
+  font-size: 3rem;
+  margin: 2rem;
+}
+
+input {
+  margin: 0.5rem 2rem;
+  padding: 1rem 0.5rem;
+  font-size: 1.5rem;
+  border: none;
+  outline: none;
+  border-bottom: 3px solid white;
+  background-color: transparent;
+  color: white;
+}
+
+#email-field,
+#password-field {
+  display: flex;
+  flex-direction: column;
+}
+
+#email-field label,
+#password-field label,
+.firstname-field label,
+.lastname-field label {
+  margin: 0.5rem 2rem;
+}
+
+.Form button,
+.ProfileForm button,
+.SkillsForm .btns button {
+  margin: 1rem 2rem;
+  padding: 1rem 1.5rem;
+  font-size: 1.5rem;
+  font-weight: 900;
+  background: transparent;
+  outline: none;
+  color: #e2e2e5;
+  box-shadow: none;
+  border: 2px solid #e2e2e5;
+  border-radius: 40px;
+  transition: all 0.5s ease;
+}
+
+.Form button:hover,
+.ProfileForm button:hover,
+.SkillsForm .btns button:hover {
+  cursor: pointer;
+  background: #e2e2e5;
+  color: #2d2f36;
+}
+
+.Form .sign-in-link,
+.sign-up-link {
+  margin: 1rem 2rem;
+}
+
+.Form .link {
+  color: #2d2f36;
+  margin: 1rem 0;
+  background: #e2e2e5;
+  padding: 0.5rem 1rem;
+  display: inline-block;
+  font-size: 0.9rem;
+  border: 2px solid #e2e2e5;
+  border-radius: 40px;
+  transition: 0.5s all ease;
+}
+
+.Form .link:hover {
+  background: transparent;
+  color: #e2e2e5;
+}
+
+@media (max-width: 450px) {
+  .Form h1,
+  .ProfileForm h1 {
+    font-size: 1.5rem;
+    margin: 1rem;
+  }
+
+  input {
+    margin: 0.25rem 1rem;
+    padding: 1rem 0.5rem;
+    font-size: 1rem;
+  }
+
+  #email-field label,
+  #password-field label,
+  .firstname-field label,
+  .lastname-field label {
+    margin: 0.25rem 1rem;
+  }
+
+  .Form button,
+  .ProfileForm button,
+  .SkillsForm .btns button {
+    margin: 0.5rem 1rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+  }
+
+  .Form .sign-in-link,
+  .sign-up-link {
+    margin: 0.5rem 1rem;
+  }
+
+  .Form .link {
+    margin: 1rem 0;
+    padding: 0.25rem 0.5rem;
+    font-size: 0.7rem;
+  }
+}
