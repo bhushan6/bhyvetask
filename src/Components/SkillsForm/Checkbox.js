@@ -1,10 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './SkillsForm.css'
 
-const Checkbox = ({skillName, user, publicId}) => {
+
+
+
+const Checkbox = ({skillName, user, publicId, userSkills}) => {
     if (user.skills === null) {
         user.skills = []
     }
+const [checked, setChecked] = useState(false)
+
+   
 
     const handleChange = (e) => {
         if(e.target.checked){
@@ -17,13 +23,22 @@ const Checkbox = ({skillName, user, publicId}) => {
 
     return (
         <div className="Checkbox">
-            <input 
+            {user.skills.includes(skillName) ? (
+                <input 
                 type="checkbox" 
                 id="vehicle1" 
                 name={skillName} 
                 value={skillName}
                 onChange = {handleChange}
+                checked 
             />
+            ) : (<input 
+                type="checkbox" 
+                id="vehicle1" 
+                name={skillName} 
+                value={skillName}
+                onChange = {handleChange}
+            />)}
             <label  htmlFor={skillName} >
                 {skillName}
             </label>
@@ -32,3 +47,6 @@ const Checkbox = ({skillName, user, publicId}) => {
 }
 
 export default Checkbox
+// {user.skills.includes(skillName)
+
+

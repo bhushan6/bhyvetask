@@ -35,6 +35,7 @@ const SkillsForm = ({accessToken, user}) => {
         })
     }
 
+    console.log(user.skills)
     const saveSkills = () => {
         if(user.skills.length < 3 || user.skills.length > 8){
             alert("You can add min 3 and max. 8 skills")
@@ -67,7 +68,7 @@ const SkillsForm = ({accessToken, user}) => {
                 {loaded? 
                     skills
                     .slice(pageNo, pageNo+10)
-                    .map(i => <Checkbox skillName = {i.skillName} key={i.publicId} user={user} publicId ={i.publicId}/>)
+                    .map(i => <Checkbox userSkills = {user.skills} skillName = {i.skillName} key={i.publicId} user={user} publicId ={i.publicId}/>)
                     : null
                 }
             </div>
